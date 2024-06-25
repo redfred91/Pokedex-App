@@ -1,0 +1,173 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Optional: a fallback color */
+}
+
+.pokedex-container {
+  width: 100%;
+  height: 100%;
+  background-image: url('./images/pokedex.png'); /* Set the image as the background */
+  background-size: cover; /* Make sure the background covers the entire screen */
+  background-position: center; /* Center the background image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.results-box {
+  position: absolute;
+  top: 25.8%; /* Adjust this value to position the top of the results box */
+  left: 37.1%; /* Adjust this value to position the left side of the results box */
+  right: 35.4%; /* Adjust this value to position the right side of the results box */
+  height: 36.5%; /* Adjust this value to fit the height of the grey screen */
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+}
+
+.result-item {
+  cursor: pointer;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.result-item:hover {
+  background-color: #f0f0f0;
+}
+
+.card-name, .card-set {
+  margin: 0;
+  font-size: 14px;
+}
+
+.search-bar {
+  position: absolute;
+  top: 79.4%; /* Adjust this value to position the top of the search box */
+  left: 41%; /* Adjust this value to position the left side of the search box */
+  right: 45.5%; /* Adjust this value to position the right side of the search box */
+  height: 8.5%; /* Adjust this value to fit the height of the green screen */
+  background-color: transparent;
+  color: yellow;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+}
+
+.camera-button {
+  position: absolute;
+  top: 65%; /* Adjust to position the camera button correctly */
+  left: 40.6%;
+  transform: translateX(-50%);
+  width: 3%;
+  height: auto;
+  opacity: 0; /* Make it invisible */
+}
+
+.collection-button {
+  position: absolute;
+  bottom: 22.4%; /* Adjust to position the button correctly */
+  left: 37.1%; /* Adjust to position the button correctly */
+  transform: translateX(-50%);
+  width: 60px; /* Adjust the width to fit the button size */
+  height: 60px; /* Adjust the height to fit the button size */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0; /* Make it completely invisible */
+}
+
+.card-details-box {
+  position: absolute;
+  top: 25.8%; /* Adjust this value to position the top of the details box */
+  left: 37.1%; /* Adjust this value to position the left side of the details box */
+  right: 35.4%; /* Adjust this value to position the right side of the details box */
+  height: 36.5%; /* Adjust this value to fit the height of the grey screen */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card-image-large {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.card-details-large {
+  text-align: center;
+}
+
+.card-details-large h2 {
+  margin: 10px 0;
+}
+
+.card-details-large p {
+  margin: 5px 0;
+}
+
+.collection-box {
+  position: absolute;
+  top: 25.8%; /* Adjust this value to position the top of the collection box */
+  left: 37.1%; /* Adjust this value to position the left side of the collection box */
+  right: 35.4%; /* Adjust this value to position the right side of the collection box */
+  height: 36.5%; /* Adjust this value to fit the height of the grey screen */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #000;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.collection-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.expanded-image-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Add background to match results box */
+  border: 1px solid #000; /* Add border to match results box */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.card-image-expanded {
+  max-width: 90%; /* Scale the image to fit within the box */
+  max-height: 90%; /* Maintain the aspect ratio */
+  cursor: pointer;
+}
+
