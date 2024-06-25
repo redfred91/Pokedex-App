@@ -5,8 +5,10 @@ import time
 from urllib.error import URLError, HTTPError
 from time import sleep
 
-# Set up your API key
-API_KEY = '9f330df3-229b-4e32-8862-2ef0fc1147d8'
+# Set up your API key from an environment variable
+API_KEY = os.getenv('POKEMON_TCG_API_KEY')
+if not API_KEY:
+    raise ValueError("No API key found. Please set the POKEMON_TCG_API_KEY environment variable.")
 pokemontcgsdk.config.API_KEY = API_KEY
 
 
